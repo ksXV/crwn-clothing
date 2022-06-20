@@ -10,7 +10,7 @@ import { setCurrentUser } from "./redux/user/user.actions";
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 import { onSnapshot } from "firebase/firestore";
 import { selectCurrentUser } from "./redux/user/user.selector";
-
+import { GlobalStyle } from "./global.styles";
 import { createStructuredSelector } from "reselect";
 import "./App.css";
 class App extends Component {
@@ -39,6 +39,7 @@ class App extends Component {
     return (
       <div>
         <Header />
+        <GlobalStyle />
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/shop" component={ShopPage} />
